@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scrollView1: CropperScrollView!
 
-    var scrollView2 = CropperScrollView(frame: .zero) 
+    var scrollView2 = CropperScrollView() 
 
     @IBOutlet weak var croppedImageView: UIImageView!
 
@@ -44,8 +44,8 @@ class ViewController: UIViewController {
         scrollView2.layer.borderWidth = 2
 
         let image = UIImage(named: "hodler_landscapes_27_940.jpg")
-        scrollView1.loadImage(image: image!)
-        scrollView2.loadImage(image: image!)
+        scrollView1.loadImage(image!)
+        scrollView2.loadImage(image!)
 
         selectScrollView()
     }
